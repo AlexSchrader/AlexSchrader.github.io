@@ -24,18 +24,18 @@
           return;
         }
         if (myGuess < randomNumber) {
-          feedback.textContent = "Try again. Your guess is too low.";
+          feedback.textContent = "Try again. Your guess is too low." + " Tries left " + chance;
           chance--;
           if (chance === 0) {
-            feedback.textContent = "Game over. The correct number was " + randomNumber + ".";
+            feedback.textContent = "Game Over! The correct number was " + randomNumber + ".";
             document.getElementById("guess").disabled = true;
             return;
           }
         } else if (myGuess > randomNumber) {
-          feedback.textContent = "Try again. Your guess is too high.";
+          feedback.textContent = "Try again. Your guess is too high." + " Tries left " + chance;
           chance--;
           if (chance === 0) {
-            feedback.textContent = "Game over. The correct number was " + randomNumber + ".";
+            feedback.textContent = "Game Over! The correct number was " + randomNumber + ".";
             document.getElementById("guess").disabled = true;
             return;
           }
@@ -44,7 +44,7 @@
           document.getElementById("guess").disabled = true;
           return;
         }
-        feedback.textContent = "Your guess is " + myGuess + ". You have " + chance + " chances left.";
+          
       }
     </script>
   </body>
